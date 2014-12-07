@@ -1,0 +1,22 @@
+ZIMZIMToolsBundle:
+    name: "Nom"
+    position: "Position"
+    slug: "Lien"
+    image: "Image"
+    parent: "Parent"
+    updatedat: "Modifier le"
+    button:
+        create: "Créer"
+        update: "Modifier"
+        delete: "Supprimer"
+        show: "Voir"
+    flashbag:
+        success:
+            create: "Création réussit"
+            update: "Modification réussit"
+            delete: "Suppréssion réussit"
+    grid:
+        generic:
+            nodata: "Pas encore de donnée"
+            nomessage: "Aucun résultat trouvé"
+        file: "Fichier"

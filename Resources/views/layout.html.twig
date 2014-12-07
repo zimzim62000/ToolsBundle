@@ -1,0 +1,21 @@
+{% trans_default_domain 'ZIMZIMTools' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    {% block headeoandshare %}{% endblock headeoandshare %}
+    <title>{% block title %}{{ 'metatitle'|trans }}{% endblock title %}</title>
+    <META NAME="description" CONTENT="{% block metadescription %}{{ 'metadesc'|trans }}{% endblock metadescription %}">
+    {% block zimzimseo %}{% endblock zimzimseo %}
+</head>
+<body>
+{% block body %}
+
+    {% block page %}
+        {% block breadcrumbs %}{% endblock breadcrumbs %}
+    {% endblock page %}
+
+{% endblock body %}
+</body>
+</html>

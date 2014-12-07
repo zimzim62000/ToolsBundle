@@ -1,0 +1,15 @@
+services:
+    zimzim_tools.form.type.zimzimcollectionformtype:
+        class: %zimzim_tools.zimzimcollection_formtype%
+        tags:
+            - { name: form.type, alias: zimzim_toolsbundle_zimzimcollection }
+
+    zimzim_tools.form.type.zimzimimageformtype:
+        class: %zimzim_tools.zimzimimage_formtype%
+        tags:
+            - { name: form.type, alias: zimzim_toolsbundle_zimzimimage }
+
+    zimzim_tools.form.type.zimzimtinymceformtype:
+        class: %zimzim_tools.zimzimtinymce_formtype%
+        tags:
+            - { name: form.type, alias: zimzim_toolsbundle_zimzimtinymce }

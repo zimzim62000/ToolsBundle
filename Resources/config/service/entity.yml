@@ -1,0 +1,3 @@
+services:
+    zimzim_tools.entity.uploadtinymce:
+        class: %zimzim_tools.uploadtinymce_class%

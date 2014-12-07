@@ -1,0 +1,6 @@
+services:
+    zimzim_tools.form.type.zimzimuploadtinymce_formtype:
+        class: ZIMZIM\ToolsBundle\Form\Type\UploadTinymceType
+        arguments: [ @zimzim_tools_uploadtinymcemanager ]
+        tags:
+            - { name: form.type, alias: zimzim_toolsbundle_uploadtinymcetype }

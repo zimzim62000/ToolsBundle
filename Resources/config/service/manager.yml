@@ -1,0 +1,6 @@
+services:
+    zimzim_tools_uploadtinymcemanager:
+        class: ZIMZIM\ToolsBundle\Doctrine\UploadTinymceManager
+        arguments:
+            - @doctrine.orm.entity_manager
+            - @zimzim_tools_configuration_uploadtinymce

@@ -1,0 +1,30 @@
+zimzim_toolsbundle_uploadtinymce:
+    path:     /
+    defaults: { _controller: "ZIMZIMToolsBundle:UploadTinymce:index" }
+
+zimzim_toolsbundle_uploadtinymce_show:
+    path:     /{id}/show
+    defaults: { _controller: "ZIMZIMToolsBundle:UploadTinymce:show" }
+
+zimzim_toolsbundle_uploadtinymce_new:
+    path:     /new
+    defaults: { _controller: "ZIMZIMToolsBundle:UploadTinymce:new" }
+
+zimzim_toolsbundle_uploadtinymce_create:
+    path:     /create
+    defaults: { _controller: "ZIMZIMToolsBundle:UploadTinymce:create" }
+    requirements: { _method: post }
+
+zimzim_toolsbundle_uploadtinymce_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ZIMZIMToolsBundle:UploadTinymce:edit" }
+
+zimzim_toolsbundle_uploadtinymce_update:
+    path:     /{id}/update
+    defaults: { _controller: "ZIMZIMToolsBundle:UploadTinymce:update" }
+    requirements: { _method: post|put }
+
+zimzim_toolsbundle_uploadtinymce_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ZIMZIMToolsBundle:UploadTinymce:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,23 @@
+metatitle: "zimzim tools bundles"
+metadesc: "zimzim tools bundles"
+button:
+    create: "Créer"
+    return: "Retour"
+    update: "Modifier"
+    delete: "Supprimer"
+    show: "Voir"
+    moveup: "Remonté"
+    movedown: "descendre"
+adminulploadtinymce:
+    index:
+        title: "Administration des fichiers"
+    show:
+        title: "descriptif du fichier : %name%"
+    new:
+        title: "Création d'une fichier"
+    update:
+        title: "Modification du fichier : %name%"
+    entity:
+        id: "Id"
+        name: "Nom"
+        image: "Image"

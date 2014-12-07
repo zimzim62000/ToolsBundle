@@ -1,0 +1,6 @@
+services:
+    zimzim_tools_configuration_uploadtinymce:
+        class: "ZIMZIM\ToolsBundle\Doctrine\Configuration\ConfigurationUploadTinymce"
+        arguments:
+            - @zimzim_tools.entity.uploadtinymce
+            - %zimzim_tools.uploadtinymce_form%

@@ -1,0 +1,6 @@
+imports:
+    - { resource: service/entity.yml }
+    - { resource: service/form.yml }
+    - { resource: service/formtype.yml }
+    - { resource: service/config.yml }
+    - { resource: service/manager.yml }
