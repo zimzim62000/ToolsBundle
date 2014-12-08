@@ -171,7 +171,7 @@ class UploadTinymceController extends MainController
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createEditForm(UploadTinymce $entity, $manager)
+    private function createEditForm($entity, $manager)
     {
         $form = $this->createForm(
             $manager->getFormName(),

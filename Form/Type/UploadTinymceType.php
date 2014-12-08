@@ -7,9 +7,17 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use ZIMZIM\ToolsBundle\Doctrine\Manager;
 
 class UploadTinymceType extends AbstractType
 {
+    private $uploadTinymceManager;
+
+    public function  __construct(Manager $uploadTinymceManager)
+    {
+        $this->uploadTinymceManager = $uploadTinymceManager;
+    }
+
     /**
      * @param FormBuilderInterface $builder
      * @param array $options
@@ -56,7 +64,7 @@ class UploadTinymceType extends AbstractType
     {
         $resolver->setDefaults(
             array(
-                'data_class' => 'ZIMZIM\ToolsBundle\Entity\UploadTinymce',
+                'data_class' => $this->uploadTinymceManager->getClassName(),
                 'attr' => array(
                     'class' => 'zimzim-panel'
                 ),
