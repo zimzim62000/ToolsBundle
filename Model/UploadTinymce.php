@@ -5,7 +5,7 @@ namespace ZIMZIM\ToolsBundle\Model;
 use ZIMZIM\ToolsBundle\Model\APYDataGrid\ApyDataGridFilePathInterface;
 use Doctrine\ORM\Mapping as ORM;
 use APY\DataGridBundle\Grid\Mapping as GRID;
-
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * UploadTinymce
@@ -48,10 +48,13 @@ class UploadTinymce extends FileUpload implements ApyDataGridFilePathInterface
 
     protected function getUploadDir()
     {
-        return 'resources/upload';
+        return 'resources/uploads';
     }
 
-    use FileUploadTrait;
+    protected function getUploadRootDir()
+    {
+        return __DIR__ . '/../../../../web/' . $this->getUploadDir();
+    }
 
 
     /**
@@ -68,5 +71,37 @@ class UploadTinymce extends FileUpload implements ApyDataGridFilePathInterface
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param mixed $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
     }
 }
