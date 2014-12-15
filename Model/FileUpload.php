@@ -66,11 +66,13 @@ abstract class FileUpload
                     }
                 }
 
+                $random = rand(1, 1000);
+
                 $extension = strrchr($this->file->getClientOriginalName(), '.');
 
                 $filename = str_replace($extension, '', $this->file->getClientOriginalName());
 
-                $this->path = urlencode($filename) . '.' . $this->file->guessExtension();
+                $this->path = urlencode($filename) . '-' . $random . '.' . $this->file->guessExtension();
             }
         }
     }
