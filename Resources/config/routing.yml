@@ -1,5 +1,5 @@
 zimzim_tools_zimzim_toolsbundle_adminuploadtinymce:
     resource: "@ZIMZIMToolsBundle/Resources/config/routing/adminuploadtinymce.yml"
-    prefix:   /admin/uploadtinymce/
+    prefix:   /zimzim/uploadtinymce/
 
 
