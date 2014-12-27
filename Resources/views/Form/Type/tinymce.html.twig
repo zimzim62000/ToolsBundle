@@ -1,10 +1,14 @@
 <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+{% stylesheets 'built/css/min.css' filter='cssrewrite' %}
+{% set url = asset_url %}
+{% endstylesheets %}
 <script>
     tinymce.init({
         selector: 'textarea.zimzim-tinymce',
+        content_css : "{{ url }}",
         plugins: [
             "advlist autolink lists link image charmap print preview anchor",
-            "searchreplace visualblocks code fullscreen",
+            "searchreplace visualblocks code fullscreen importcss",
             "insertdatetime media table contextmenu paste"
         ]
     });
