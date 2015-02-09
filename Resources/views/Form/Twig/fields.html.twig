@@ -131,3 +131,19 @@
         </div>
     {% endspaceless %}
 {% endblock zimzim_toolsbundle_zimzimimage_widget %}
+
+
+{% block zimzim_toolsbundle_zimzimupload_widget %}
+    {% spaceless %}
+        {% set type = type|default('text') -%}
+        <div class="row">
+            <div class="medium-6 columns">
+                <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+            </div>
+            {% if form.vars.attr['extension'] %}
+                <div class="medium-6 columns">
+                    <h3>{{ form.vars.attr['extension'] }}</h3>
+                </div>{% endif %}
+        </div>
+    {% endspaceless %}
+{% endblock zimzim_toolsbundle_zimzimupload_widget %}

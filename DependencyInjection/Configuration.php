@@ -24,6 +24,7 @@ class Configuration implements ConfigurationInterface
             ->children()
             ->scalarNode('zimzimcollection_formtype')->defaultValue('ZIMZIM\ToolsBundle\Form\Type\ZIMZIMCollectionType')->end()
             ->scalarNode('zimzimimage_formtype')->defaultValue('ZIMZIM\ToolsBundle\Form\Type\ZIMZIMImageType')->end()
+            ->scalarNode('zimzimupload_formtype')->defaultValue('ZIMZIM\ToolsBundle\Form\Type\ZIMZIMUploadType')->end()
             ->scalarNode('zimzimtinymce_formtype')->defaultValue('ZIMZIM\ToolsBundle\Form\Type\ZIMZIMTinymceType')->end()
             ->scalarNode('uploadtinymce_class')->isRequired()->cannotBeEmpty()->end()
             ->scalarNode('uploadtinymce_form')->defaultValue('zimzim_toolsbundle_uploadtinymcetype')->end()

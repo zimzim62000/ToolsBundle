@@ -24,6 +24,7 @@ class ZIMZIMToolsExtension extends Extension
 
         $container->setParameter($this->getAlias().'.zimzimcollection_formtype', $config['zimzimcollection_formtype']);
         $container->setParameter($this->getAlias().'.zimzimimage_formtype', $config['zimzimimage_formtype']);
+        $container->setParameter($this->getAlias().'.zimzimupload_formtype', $config['zimzimupload_formtype']);
         $container->setParameter($this->getAlias().'.zimzimtinymce_formtype', $config['zimzimtinymce_formtype']);
         $container->setParameter($this->getAlias().'.uploadtinymce_class', $config['uploadtinymce_class']);
         $container->setParameter($this->getAlias().'.uploadtinymce_form', $config['uploadtinymce_form']);

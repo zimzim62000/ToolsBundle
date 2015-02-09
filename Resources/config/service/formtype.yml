@@ -13,3 +13,8 @@ services:
         class: %zimzim_tools.zimzimtinymce_formtype%
         tags:
             - { name: form.type, alias: zimzim_toolsbundle_zimzimtinymce }
+
+    zimzim_tools.form.type.zimzimuploadformtype:
+        class: %zimzim_tools.zimzimupload_formtype%
+        tags:
+            - { name: form.type, alias: zimzim_toolsbundle_zimzimupload }
