@@ -46,8 +46,9 @@ class MainController extends Controller
         if ($setSource) {
             $grid->setSource($source);
         }
-
-        $data['manager']->getRepository()->getList($source);
+        
+        $security = $this->container->get('security.context');
+        $data['manager']->getRepository()->getList($source, $security);
 
         $object = $this;
 
