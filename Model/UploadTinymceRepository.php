@@ -5,6 +5,7 @@ namespace ZIMZIM\ToolsBundle\Model;
 use APY\DataGridBundle\Grid\Source\Entity;
 use Doctrine\ORM\EntityRepository;
 use ZIMZIM\ToolsBundle\Model\APYDataGrid\ApyDataGridRepositoryInterface;
+use Symfony\Component\Security\Core\SecurityContext;
 
 /**
  * UploadTinymceRepository
@@ -14,7 +15,7 @@ use ZIMZIM\ToolsBundle\Model\APYDataGrid\ApyDataGridRepositoryInterface;
  */
 class UploadTinymceRepository extends EntityRepository implements ApyDataGridRepositoryInterface
 {
-    public function getList(Entity $source)
+    public function getList(Entity $source, SecurityContext $securityContext)
     {
         return $source;
     }
