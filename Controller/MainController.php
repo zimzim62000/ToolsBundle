@@ -22,12 +22,18 @@ class MainController extends Controller
         $source = $this->setSource($data);
 
         if (isset($data['show'])) {
-            $rowAction = new RowAction("ZIMZIMToolsBundle.button.show", $data['show']);
+            $rowAction = new RowAction("ZIMZIMToolsBundle.button.show", $data['show'], false, '_self', array(
+            'class' => '',
+            'icon' => 'icon-eye'
+            ));
             $grid->addRowAction($rowAction);
         }
 
         if (isset($data['edit'])) {
-            $rowAction = new RowAction("ZIMZIMToolsBundle.button.update", $data['edit']);
+            $rowAction = new RowAction("ZIMZIMToolsBundle.button.update", $data['edit'], false, '_self', array(
+            'class' => '',
+            'icon' => 'icon-pencil'
+            ));
             $grid->addRowAction($rowAction);
         }
 
@@ -40,8 +46,9 @@ class MainController extends Controller
         if ($setSource) {
             $grid->setSource($source);
         }
-
-        $data['manager']->getRepository()->getList($source);
+        
+        $security = $this->container->get('security.context');
+        $data['manager']->getRepository()->getList($source, $security);
 
         $object = $this;
 
