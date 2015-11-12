@@ -19,7 +19,7 @@ trait MetaSEO{
      * @var string
      *
      * @GRID\Column(operatorsVisible=false, visible=false, filterable=false)
-     * @ORM\Column(name="desc_seo, type="text")
+     * @ORM\Column(name="desc_seo", type="text")
      */
     public $descSeo;
 
