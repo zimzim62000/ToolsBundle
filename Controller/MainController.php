@@ -47,8 +47,9 @@ class MainController extends Controller
             $grid->setSource($source);
         }
         
-        $security = $this->container->get('security.context');
-        $data['manager']->getRepository()->getList($source, $security);
+        $token = $this->container->get('security.token_storage');
+		$checker = $this->container->get('security.authorization_checker');
+        $data['manager']->getRepository()->getList($source, $token, $checker);
 
         $object = $this;
 
